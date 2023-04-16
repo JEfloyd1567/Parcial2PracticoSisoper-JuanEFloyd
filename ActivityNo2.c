@@ -33,7 +33,7 @@ int asignar(int tam_proceso, int metodo){
                     indice_particion = i;
                     break;
                 }
-            }
+            
             break;
 
         case BEST_FIT:
