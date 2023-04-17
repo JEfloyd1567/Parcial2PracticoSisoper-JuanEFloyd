@@ -2,10 +2,13 @@ Activity No 1:
 
 se compila de la siguiente manera:
 ejecute los siguientes comandos en el cmd o consola:
+
 gcc -o p1 ActivityNo1.c
 ./p1
+
 un ejemplo para probar este punto se ve de la siguiente forma:
 para MFT:
+
 1 #Metodos 1 = MFT, 2 = MVT
 1000 #total memory
 300 #block size
@@ -16,11 +19,22 @@ para MFT:
 293
 100
 
+un ejemplo para probar este punto para el algoritmo MVT
+2
+1000
+3
+400
+275
+550
+
 Activity No 2:
+
 se compila de la siguiente manera:
 ejecute los siguientes comandos en el cmd o consola:
+
 gcc -o p2 ActivityNo2.c
 ./p2
+
 1 #metodos 1: first fit, 2: best fit, 3: worst fit
 5 #number of memory partitions in order
 100
