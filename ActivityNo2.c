@@ -80,7 +80,7 @@ int main(){
     int tamano_original_particion[MAX_PARTICIONES];
     scanf("%d", &metodo);
 
-    // Seleccionar el método de asignacion de memoria
+    // Seleccionar el metodo de asignacion de memoria
     int metodo_asignacion;
     switch (metodo){
         case 1:
@@ -97,7 +97,7 @@ int main(){
             return 1;
     }
 
-    // Leer el número de particiones disponibles
+    // Leer el numero de particiones disponibles
     scanf("%d", &num_particiones);
 
     // Leer las particiones disponibles
@@ -107,7 +107,7 @@ int main(){
         total_particiones += particiones[i];
     }
 
-    // Leer el número de procesos a asignar
+    // Leer el numero de procesos a asignar
     scanf("%d", &num_procesos);
 
     // Leer los procesos a asignar
