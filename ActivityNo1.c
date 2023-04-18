@@ -136,3 +136,4 @@ int main(){
     printf("Fragmentacion Externa: %d\n", fragmentacion_externa);
 
     return 0;
+}
