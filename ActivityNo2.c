@@ -77,7 +77,7 @@ int asignar(int tam_proceso, int metodo){
   La funcion "imprimir_particiones" imprime en pantalla el tamano de cada particion.
 
 */
-void imprimir_particiones() {
+void imprimir_particiones(){
     int i;
     for (i = 0; i < num_particiones; i++){
         printf("tamano de particion %d, es %d\n", i, particiones[i]);
@@ -141,16 +141,16 @@ int main(){
     int particiones_asignadas[MAX_PROCESOS];
     memset(particiones_asignadas, -1, sizeof(particiones_asignadas));
 
-    for (i = 0; i < num_procesos; i++) {
+    for (i = 0; i < num_procesos; i++){
         particiones_asignadas[i] = asignar(procesos[i], metodo_asignacion);
-        if (particiones_asignadas[i] == -1) {
+        if (particiones_asignadas[i] == -1){
             printf("No hay suficiente espacio disponible para asignar el proceso %d\n", i+1);
         }
     }
 
     // Imprimir el resultado
-    for (i = 0; i < num_procesos; i++) {
-        if (particiones_asignadas[i] != -1) {
+    for (i = 0; i < num_procesos; i++){
+        if (particiones_asignadas[i] != -1){
             printf("El proceso %d fue asignado a la particion %d\n", i+1, particiones_asignadas[i]+1);
         }
     }
