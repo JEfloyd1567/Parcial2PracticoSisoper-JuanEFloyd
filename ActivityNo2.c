@@ -72,24 +72,12 @@ int asignar(int tam_proceso, int metodo){
     return indice_particion;
 }
 
-/*
-
-  La funcion "imprimir_particiones" imprime en pantalla el tamano de cada particion.
-
-*/
-void imprimir_particiones(){
-    int i;
-    for (i = 0; i < num_particiones; i++){
-        printf("tamano de particion %d, es %d\n", i, particiones[i]);
-    }
-    printf("\n");
-}
-
 int main(){
     int i, j;
     int metodo;
     int tam_proceso;
     int total_particiones = 0;
+    int tamano_original_particion[MAX_PARTICIONES];
     scanf("%d", &metodo);
 
     // Seleccionar el método de asignación de memoria
@@ -115,6 +103,7 @@ int main(){
     // Leer las particiones disponibles
     for (i = 0; i < num_particiones; i++){
         scanf("%d", &particiones[i]);
+        tamano_original_particion[i] = particiones[i];
         total_particiones += particiones[i];
     }
 
@@ -150,13 +139,10 @@ int main(){
 
     // Imprimir el resultado
     for (i = 0; i < num_procesos; i++){
+        printf("P%d -> ", i);
         if (particiones_asignadas[i] != -1){
-            printf("El proceso %d fue asignado a la particion %d\n", i+1, particiones_asignadas[i]+1);
+            printf(" %d asignado en %d, %d particion.\n", procesos[i], tamano_original_particion[particiones_asignadas[i]], particiones_asignadas[i]+1);
         }
     }
-
-    // Imprimir el estado final de las particiones
-    imprimir_particiones();
-
     return 0;
 }
