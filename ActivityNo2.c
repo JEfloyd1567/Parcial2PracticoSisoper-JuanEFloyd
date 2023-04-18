@@ -17,7 +17,7 @@ int num_procesos; // numero de procesos a asignar
 
 /*
  La función "asignar" busca una particion adecuada para el proceso y la asigna.
- Recibe como parametros el tamano del proceso a asignar y el metodo de asignación a utilizar.
+ Recibe como parametros el tamano del proceso a asignar y el metodo de asignacion a utilizar.
  Devuelve el indice de la partición asignada, o -1 si no hay espacio disponible.
  */
 int asignar(int tam_proceso, int metodo){
@@ -80,7 +80,7 @@ int main(){
     int tamano_original_particion[MAX_PARTICIONES];
     scanf("%d", &metodo);
 
-    // Seleccionar el método de asignación de memoria
+    // Seleccionar el método de asignacion de memoria
     int metodo_asignacion;
     switch (metodo){
         case 1:
@@ -126,7 +126,7 @@ int main(){
         return 1;
     }
 
-    // Asignar los procesos a las particiones utilizando el método seleccionado
+    // Asignar los procesos a las particiones utilizando el metodo seleccionado
     int particiones_asignadas[MAX_PROCESOS];
     memset(particiones_asignadas, -1, sizeof(particiones_asignadas));
 
