@@ -75,14 +75,14 @@ int main(){
     scanf("%d", &metodo);
     scanf("%d", &total_memoria);
     
-    if (metodo == MFT) {
+    if (metodo == MFT){
         scanf("%d", &tam_particion);
         num_particiones = total_memoria / tam_particion; // se calcula el numero de particiones
         for (i = 0; i < num_particiones; i++){
             particiones[i] = tam_particion; // se inicializan todas las particiones con el mismo tamano
         }
     } 
-    else if (metodo == MVT) {
+    else if (metodo == MVT){
         num_particiones = 1;
         particiones[0] = total_memoria; // se tiene una sola particion que ocupa toda la memoria
     }
