@@ -26,7 +26,7 @@ int asignar_mft(int tam_proceso){
             indice_particion = i;
         }
     }
-    // Si se encontro una partición disponible, se asigna el proceso a esa particion y se actualiza el tamano de la particion
+    // Si se encontro una particion disponible, se asigna el proceso a esa particion y se actualiza el tamano de la particion
     if (indice_particion != -1){
         particiones[indice_particion] -= tam_proceso;
     }
@@ -34,13 +34,13 @@ int asignar_mft(int tam_proceso){
     return indice_particion;
 }
 
-/* Función que asigna una particion a un proceso usando el algoritmo MVT */
+/* Funcion que asigna una particion a un proceso usando el algoritmo MVT */
 int asignar_mvt(int tam_proceso){
     int i;
     int tam_bloque;
     int indice_bloque = -1;
     int min_fragmentacion = total_memoria + 1;
-    // Recorre el arreglo de particiones buscando la partición que tenga el tamano mas cercano al tamano del proceso
+    // Recorre el arreglo de particiones buscando la particion que tenga el tamano mas cercano al tamano del proceso
     for (i = 0; i < num_particiones; i++){
         tam_bloque = particiones[i];
         if (tam_proceso <= tam_bloque && (tam_bloque - tam_proceso) < min_fragmentacion){
@@ -48,7 +48,7 @@ int asignar_mvt(int tam_proceso){
             min_fragmentacion = tam_bloque - tam_proceso;
         }
     }
-    // Si se encontro una partición disponible, se asigna el proceso a esa particion y se actualiza el tamano de la particion
+    // Si se encontro una particion disponible, se asigna el proceso a esa particion y se actualiza el tamano de la particion
     if (indice_bloque != -1){
         particiones[indice_bloque] -= tam_proceso;
         if (particiones[indice_bloque] > 0){
