@@ -111,7 +111,7 @@ int main(){
         }
 
     } 
-    else if (metodo == MVT) {
+    else if (metodo == MVT){
         for (i = 0; i < num_procesos; i++){
             printf("P%d -> ", i);
             int indice_bloque = asignar_mvt(procesos[i]); // se asigna una particion al proceso
@@ -126,7 +126,7 @@ int main(){
         }
     }
 
-    else if (metodo == MVT) {
+    else if (metodo == MVT){
         fragmentacion_interna = -1;
     }
     // Imprimimos los resultados
@@ -136,4 +136,3 @@ int main(){
     printf("Fragmentacion Externa: %d\n", fragmentacion_externa);
 
     return 0;
-}
